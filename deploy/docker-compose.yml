@@ -1,0 +1,33 @@
+version:  '3.9'
+
+services:
+  lotteries_api:
+    build: dockerfile/php
+    restart: on-failure
+    ports:
+      - 8080:8080
+    volumes:
+      - ../project:/var/www/html
+      - ../project/vendor:/var/www/html/vendor
+    depends_on:
+      lotteries_db:
+        condition: service_healthy
+    links:
+      - lotteries_db
+    command: php -S 0.0.0.0:8080 public/index.php
+
+  lotteries_db:
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    expose:  
+      - "5432"
+    volumes:
+      - ./db/user:/var/lib/pgsql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
