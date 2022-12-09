@@ -4,8 +4,11 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\LotteryGame;
 
-class DatabaseSeeder extends Seeder
+const GAME_COUNT = 5;
+
+class LotteryGameSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,9 +17,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-            UserSeeder::class,
-            LotteryGameSeeder::class
-        ]);
+        LotteryGame::factory()->count(GAME_COUNT)->create();
     }
 }
