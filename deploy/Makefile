@@ -1,6 +1,9 @@
 env:
 	if ! test -f ".env"; then cp .env.example .env; fi
 
+migrate:
+	docker-compose exec lotteries_api php artisan migrate
+
 key:
 	php -r "echo md5(uniqid()).\"\n\";"
 
