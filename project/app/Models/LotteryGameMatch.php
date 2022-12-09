@@ -17,4 +17,12 @@ class LotteryGameMatch extends Model
         'start_time',
         'winner_id',
     ];
+
+    public function winner(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function users(){
+        return $this->hasManyThrough(User::class,LotteryGameMatchUser::class);
+    }
 }

@@ -16,7 +16,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     /**
      * The attributes that are mass assignable.
      *
-     * @var string[]
+     * @var @var array<int, string>
      */
     protected $fillable = [
         'first_name', 'last_name', 'email', 'points'
@@ -39,4 +39,12 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+
+    public function gamesWon(){
+        return $this->belongsToMany(LotteryGameMatch::class);
+    }
+
+    public function matches(){
+        return $this->hasManyThrough(LotteryGameMatch::class, LotteryGameMatchUser::class);
+    }
 }

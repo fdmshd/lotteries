@@ -19,4 +19,8 @@ class LotteryGame extends Model
         'gamer_count',
         'reward_points',
     ];
+
+    function matches(){
+        return $this->hasMany(LotteryGameMatch::class);
+    }
 }
