@@ -12,5 +12,8 @@ up:
 	docker-compose up -d --build
 	docker-compose exec lotteries_api composer install
 
+dbseed:
+	docker-compose exec lotteries_api php artisan db:seed
+
 down:
 	docker-compose down
