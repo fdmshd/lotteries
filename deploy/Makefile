@@ -4,6 +4,9 @@ env:
 migrate:
 	docker-compose exec lotteries_api php artisan migrate
 
+rollback:
+	docker-compose exec lotteries_api php artisan migrate:rollback
+
 key:
 	php -r "echo md5(uniqid()).\"\n\";"
 
