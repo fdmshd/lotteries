@@ -17,11 +17,13 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')
                 ->references('id')
-                ->on('users');
+                ->on('users')
+                ->onDelete('cascade');
 
             $table->foreignId('lottery_game_match_id')
                 ->references('id')
-                ->on('lottery_game_matches');
+                ->on('lottery_game_matches')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

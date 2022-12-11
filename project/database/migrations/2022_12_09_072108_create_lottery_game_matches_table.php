@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('game_id')
                 ->references('id')
-                ->on('lottery_games');
+                ->on('lottery_games')
+                ->onDelete('cascade');
             $table->date('start_date');
             $table->time('start_time');
             $table->foreignId('winner_id')
