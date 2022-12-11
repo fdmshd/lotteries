@@ -16,6 +16,7 @@ class LotteryGameMatch extends Model
         'start_date',
         'start_time',
         'winner_id',
+        'is_finished'
     ];
 
     public function winner(){
