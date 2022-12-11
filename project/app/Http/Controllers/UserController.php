@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use stdClass;
 
 class UserController extends Controller
 {
@@ -70,9 +71,21 @@ class UserController extends Controller
         return response()->json(['message' => 'successfully deleted', 'data' => $user], 204);
     }
 
+
+    //
     public function list()
     {
         $users = User::all();
-        return response()->json($users);
+        foreach($users as $user){
+            $user->matchesWon;
+        }
+        return response()->json(['message' => 'requested list', 'data' => $users], 200);
+    }
+
+    public function getByID($id)
+    {
+        $user = User::find($id);
+        $user->matchesWon;
+        return response()->json(['message' => 'requested list', 'data' => $user], 200);
     }
 }

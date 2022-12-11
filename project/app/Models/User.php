@@ -40,11 +40,20 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         'password',
     ];
 
-    public function gamesWon(){
-        return $this->belongsToMany(LotteryGameMatch::class);
+    public function matchesWon()
+    {
+        return $this->hasMany(LotteryGameMatch::class, foreignKey: 'winner_id');
     }
 
-    public function matches(){
-        return $this->hasManyThrough(LotteryGameMatch::class, LotteryGameMatchUser::class);
+    public function matches()
+    {
+        return $this->hasManyThrough(
+            LotteryGameMatch::class,
+            LotteryGameMatchUser::class,
+            'user_id',
+            'game_id',
+            'id',
+            'id'
+        );
     }
 }

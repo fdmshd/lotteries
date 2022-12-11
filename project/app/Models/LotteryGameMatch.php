@@ -26,6 +26,6 @@ class LotteryGameMatch extends Model
 
     public function users()
     {
-        return $this->hasManyThrough(User::class, LotteryGameMatchUser::class);
+        return $this->hasManyThrough(User::class, LotteryGameMatchUser::class,firstKey:'game_id');
     }
 }

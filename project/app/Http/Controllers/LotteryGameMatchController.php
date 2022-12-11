@@ -34,6 +34,6 @@ class LotteryGameMatchController extends Controller
     {
         $gameID = $request->query('lottery_game_id');
         $lotteryMatches = LotteryGameMatch::where('game_id', $gameID)->get(); //Сделать обработку если не найдено
-        return response()->json(['message' => 'successfully finished', 'data' => $lotteryMatches], 200);
+        return response()->json(['message' => 'requested list', 'data' => $lotteryMatches], 200);
     }
 }
