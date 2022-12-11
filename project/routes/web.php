@@ -35,4 +35,8 @@ $router->group(['prefix' => 'api'], function () use ($router) {
         $router->put('/{id}', 'LotteryGameMatchController@finish');
         $router->get('/', 'LotteryGameMatchController@getByLotteryID');
     });
+
+    $router->group(['prefix' => 'lottery_game_match_users'], function () use ($router) {
+        $router->post('/', 'LotteryGameMatchUserController@signUpForMatch');
+    });
 });
