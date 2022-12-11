@@ -27,4 +27,10 @@ $router->group(['prefix'=>'api'], function() use ($router){
         $router->put('/{id}','UserController@update');
         $router->delete('/{id}','UserController@delete');
     });
+
+    $router->group(['prefix'=>'lottery_games'], function() use ($router){
+        $router->get('/','LotteryGameController@list');
+    });
+
+    
 });
