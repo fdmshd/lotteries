@@ -40,7 +40,7 @@ class UserController extends Controller
             return response()->json(['error' => 'Wrong password'], 400);
         }
 
-        //создать и вернуть токен
+        //создать и вернуть токенs
 
         return response()->json(['message' => 'successfully logged in', 'data' => $user], 200);
     }

@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('lottery_games', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->integer('gamer_count',false,true);
-            $table->integer('reward_points',false,true);
+            $table->integer('gamer_count', false, true);
+            $table->integer('reward_points', false, true);
             $table->timestamps();
         });
     }

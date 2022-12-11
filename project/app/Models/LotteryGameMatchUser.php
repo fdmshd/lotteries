@@ -16,11 +16,13 @@ class LotteryGameMatchUser extends Model
         'lottery_game_match_id'
     ];
 
-    function match(){
-        return $this->belongsTo(LotteryGameMatch::class);
+    function match()
+    {
+        return $this->belongsTo(LotteryGsameMatch::class);
     }
 
-    function user(){
+    function user()
+    {
         return $this->belongsTo(User::class);
     }
 }

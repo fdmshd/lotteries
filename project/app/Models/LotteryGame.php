@@ -20,7 +20,8 @@ class LotteryGame extends Model
         'reward_points',
     ];
 
-    function matches(){
+    function matches()
+    {
         return $this->hasMany(LotteryGameMatch::class);
     }
 }

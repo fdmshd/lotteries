@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\LotteryGameMatch;
 use Illuminate\Http\Request;
-use stdClass;
 
 class LotteryGameMatchController extends Controller
 {

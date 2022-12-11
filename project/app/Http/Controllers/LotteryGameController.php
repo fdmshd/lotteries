@@ -12,6 +12,6 @@ class LotteryGameController extends Controller
         //добавить вывод всех ее матчей, отсортированных
         //по дате и времени начала
         //можно еще пагинацию добавить
-        return response()->json(['message'=>'requested list', 'data'=>$lotteries]);
+        return response()->json(['message' => 'requested list', 'data' => $lotteries]);
     }
 }
