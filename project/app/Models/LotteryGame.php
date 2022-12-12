@@ -22,6 +22,8 @@ class LotteryGame extends Model
 
     function matches()
     {
-        return $this->hasMany(LotteryGameMatch::class);
+        return $this->hasMany(LotteryGameMatch::class, foreignKey: 'game_id')
+            ->orderBy('start_date')
+            ->orderBy('start_time');
     }
 }
