@@ -2,11 +2,14 @@ Lotteries
 =====================
 Для запуска требуется docker
 
-Клонируйте проект
+Клонируйте проект:
+```
+git clone https://github.com/fdmshd/lotteries.git
+```
 
 Перейдите в папку deploy:
 ```bash
-cd deploy
+cd lotteries/deploy
 ```
 
 Сгенерируйте .env файл из примера:
@@ -39,7 +42,6 @@ make migrate
 make dbseed
 ```
 **Радоваться**
-
 
 Настройки:
 ```
