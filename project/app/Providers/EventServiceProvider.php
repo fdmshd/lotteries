@@ -5,6 +5,8 @@ namespace App\Providers;
 use Laravel\Lumen\Providers\EventServiceProvider as ServiceProvider;
 use App\Listeners\SignUpUserListener;
 use App\Events\SignUpUserEvent;
+use App\Listeners\FinishMatchListener;
+use App\Events\FinishMatchEvent;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         SignUpUserEvent::class => [
             SignUpUserListener::class,
+        ],
+        FinishMatchEvent::class => [
+            FinishMatchListener::class,
         ],
     ];
 

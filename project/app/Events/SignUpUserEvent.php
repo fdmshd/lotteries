@@ -17,7 +17,6 @@ class SignUpUserEvent
      */
     public function __construct(LotteryGameMatchUser $matchUser)
     {
-        Log::debug("enter event");
         $this->matchUser = $matchUser;
     }
 

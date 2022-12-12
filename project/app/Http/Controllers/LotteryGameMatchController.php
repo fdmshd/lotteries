@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\FinishMatchEvent;
 use App\Models\LotteryGameMatch;
 use Illuminate\Http\Request;
+use Exception;
 
 class LotteryGameMatchController extends Controller
 {
@@ -29,7 +31,13 @@ class LotteryGameMatchController extends Controller
         if (!$lotteryMatch) {
             return response()->json(['error' => 'Match does not exist.'], 400);
         }
-        $lotteryMatch->is_finished = true;
+        try {
+            event(new FinishMatchEvent($lotteryMatch));
+        } catch (Exception $e) {
+            return response()->json([
+                'error' => $e->getMessage()
+            ], 400);
+        }
         return response()->json(['message' => 'successfully finished', 'data' => $lotteryMatch], 200);
     }
 
