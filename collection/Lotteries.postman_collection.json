@@ -1,0 +1,972 @@
+{
+	"info": {
+		"_postman_id": "ca2d5fe2-9b0e-436a-9610-74000c963a6b",
+		"name": "Lotteries",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12400873"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:06:55 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:06:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"requested list\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"first_name\": \"Otha\",\n            \"last_name\": \"Skiles\",\n            \"email\": \"lillie95@example.net\",\n            \"is_admin\": false,\n            \"points\": 747,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 2,\n            \"first_name\": \"Santos\",\n            \"last_name\": \"Beahan\",\n            \"email\": \"pklein@example.net\",\n            \"is_admin\": false,\n            \"points\": 343,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 3,\n            \"first_name\": \"Ivy\",\n            \"last_name\": \"Predovic\",\n            \"email\": \"pblock@example.net\",\n            \"is_admin\": false,\n            \"points\": 53,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 4,\n            \"first_name\": \"Mia\",\n            \"last_name\": \"Mayer\",\n            \"email\": \"jthiel@example.org\",\n            \"is_admin\": true,\n            \"points\": 46,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 5,\n            \"first_name\": \"Elmore\",\n            \"last_name\": \"Conroy\",\n            \"email\": \"herbert.senger@example.com\",\n            \"is_admin\": true,\n            \"points\": 73,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 6,\n            \"first_name\": \"Jude\",\n            \"last_name\": \"Zulauf\",\n            \"email\": \"lehner.joanne@example.net\",\n            \"is_admin\": false,\n            \"points\": 138,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 7,\n            \"first_name\": \"Lavon\",\n            \"last_name\": \"Pfannerstill\",\n            \"email\": \"raina.okuneva@example.com\",\n            \"is_admin\": false,\n            \"points\": 445,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 8,\n            \"first_name\": \"Oswald\",\n            \"last_name\": \"Kunde\",\n            \"email\": \"hermina40@example.com\",\n            \"is_admin\": false,\n            \"points\": 57,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 9,\n            \"first_name\": \"Lesley\",\n            \"last_name\": \"Trantow\",\n            \"email\": \"mya48@example.net\",\n            \"is_admin\": false,\n            \"points\": 390,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 10,\n            \"first_name\": \"Hilbert\",\n            \"last_name\": \"Rowe\",\n            \"email\": \"jaylen.hintz@example.org\",\n            \"is_admin\": false,\n            \"points\": 908,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 11,\n            \"first_name\": \"fname1\",\n            \"last_name\": \"lname1\",\n            \"email\": \"email12@mail.com\",\n            \"is_admin\": true,\n            \"points\": 0,\n            \"created_at\": \"2022-12-11T09:03:40.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:40.000000Z\",\n            \"matches_won\": [\n                {\n                    \"id\": 1,\n                    \"game_id\": 1,\n                    \"start_date\": \"2022-12-14\",\n                    \"start_time\": \"12:30:00\",\n                    \"winner_id\": 11,\n                    \"is_finished\": false,\n                    \"created_at\": \"2022-12-11T09:03:25.000000Z\",\n                    \"updated_at\": \"2022-12-11T09:03:25.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 13,\n            \"first_name\": \"fname2\",\n            \"last_name\": \"lname2\",\n            \"email\": \"fname2@mail.com\",\n            \"is_admin\": false,\n            \"points\": 0,\n            \"created_at\": \"2022-12-12T08:11:11.000000Z\",\n            \"updated_at\": \"2022-12-12T08:11:11.000000Z\",\n            \"matches_won\": []\n        },\n        {\n            \"id\": 12,\n            \"first_name\": \"fnameU\",\n            \"last_name\": \"lnameU\",\n            \"email\": \"fnameU@mail.com\",\n            \"is_admin\": true,\n            \"points\": 21,\n            \"created_at\": \"2022-12-12T03:22:32.000000Z\",\n            \"updated_at\": \"2022-12-12T09:00:42.000000Z\",\n            \"matches_won\": [\n                {\n                    \"id\": 11,\n                    \"game_id\": 5,\n                    \"start_date\": \"2022-12-14\",\n                    \"start_time\": \"12:30:00\",\n                    \"winner_id\": 12,\n                    \"is_finished\": true,\n                    \"created_at\": \"2022-12-11T09:03:25.000000Z\",\n                    \"updated_at\": \"2022-12-12T09:00:42.000000Z\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"12"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetByID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/users/12",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"12"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:01:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:01:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"requested user\",\n    \"data\": {\n        \"id\": 12,\n        \"first_name\": \"fnameU\",\n        \"last_name\": \"lnameU\",\n        \"email\": \"fnameU@mail.com\",\n        \"is_admin\": true,\n        \"points\": 21,\n        \"created_at\": \"2022-12-12T03:22:32.000000Z\",\n        \"updated_at\": \"2022-12-12T09:00:42.000000Z\",\n        \"matches_won\": [\n            {\n                \"id\": 11,\n                \"game_id\": 5,\n                \"start_date\": \"2022-12-14\",\n                \"start_time\": \"12:30:00\",\n                \"winner_id\": 12,\n                \"is_finished\": true,\n                \"created_at\": \"2022-12-11T09:03:25.000000Z\",\n                \"updated_at\": \"2022-12-12T09:00:42.000000Z\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"fname2\",\n    \"last_name\":\"lname2\",\n    \"email\":\"fname2@mail.com\",\n    \"password\":\"password2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\":\"fname2\",\n    \"last_name\":\"lname2\",\n    \"email\":\"fname2@mail.com\",\n    \"password\":\"password2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/users/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 08:11:11 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 08:11:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"successfully registered\",\n    \"data\": {\n        \"first_name\": \"fname2\",\n        \"last_name\": \"lname2\",\n        \"email\": \"fname2@mail.com\",\n        \"updated_at\": \"2022-12-12T08:11:11.000000Z\",\n        \"created_at\": \"2022-12-12T08:11:11.000000Z\",\n        \"id\": 13\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"fnameU@mail.com\",\n    \"password\":\"password1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"fnameU@mail.com\",\n    \"password\":\"password1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/users/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 08:47:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 08:47:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"successfully logged in\",\n    \"data\": {\n        \"id\": 12,\n        \"first_name\": \"fnameU\",\n        \"last_name\": \"lnameU\",\n        \"email\": \"fnameU@mail.com\",\n        \"is_admin\": true,\n        \"points\": 0,\n        \"created_at\": \"2022-12-12T03:22:32.000000Z\",\n        \"updated_at\": \"2022-12-12T03:43:32.000000Z\"\n    },\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb3R0ZXJpZXNfYXBpIiwiaWQiOjEyLCJpYXQiOjE2NzA4MzQ4NDUsImV4cCI6MTY3MDgzODQ0NX0.x9whDLQIj-BuB1L0Pc-0XuKgnDtd7opWEkSBmPm6tJQ\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"fnameU1\",\n    \"last_name\":\"lnameU1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"12"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\":\"fnameU1\",\n    \"last_name\":\"lnameU1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/users/12",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"12"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:07:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:07:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"successfully updated\",\n    \"data\": {\n        \"id\": 12,\n        \"first_name\": \"fnameU1\",\n        \"last_name\": \"lnameU1\",\n        \"email\": \"fnameU@mail.com\",\n        \"is_admin\": true,\n        \"points\": 21,\n        \"created_at\": \"2022-12-12T03:22:32.000000Z\",\n        \"updated_at\": \"2022-12-12T09:07:37.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/20",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"20"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LotteryGames",
+			"item": [
+				{
+					"name": "getList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/lottery_games",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lottery_games"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getList",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/lottery_games",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lottery_games"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 05:33:41 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 05:33:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"requested list\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"voluptatem\",\n            \"gamer_count\": 37,\n            \"reward_points\": 69,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches\": [\n                {\n                    \"id\": 5,\n                    \"game_id\": 1,\n                    \"start_date\": \"2022-12-13\",\n                    \"start_time\": \"11:30:00\",\n                    \"winner_id\": null,\n                    \"is_finished\": false,\n                    \"created_at\": \"2022-12-12T05:26:09.000000Z\",\n                    \"updated_at\": \"2022-12-12T05:26:09.000000Z\"\n                },\n                {\n                    \"id\": 4,\n                    \"game_id\": 1,\n                    \"start_date\": \"2022-12-13\",\n                    \"start_time\": \"12:30:00\",\n                    \"winner_id\": null,\n                    \"is_finished\": false,\n                    \"created_at\": \"2022-12-12T05:26:04.000000Z\",\n                    \"updated_at\": \"2022-12-12T05:26:04.000000Z\"\n                },\n                {\n                    \"id\": 1,\n                    \"game_id\": 1,\n                    \"start_date\": \"2022-12-14\",\n                    \"start_time\": \"12:30:00\",\n                    \"winner_id\": 11,\n                    \"is_finished\": false,\n                    \"created_at\": \"2022-12-11T09:03:25.000000Z\",\n                    \"updated_at\": \"2022-12-11T09:03:25.000000Z\"\n                },\n                {\n                    \"id\": 6,\n                    \"game_id\": 1,\n                    \"start_date\": \"2022-12-15\",\n                    \"start_time\": \"11:30:00\",\n                    \"winner_id\": null,\n                    \"is_finished\": false,\n                    \"created_at\": \"2022-12-12T05:26:20.000000Z\",\n                    \"updated_at\": \"2022-12-12T05:26:20.000000Z\"\n                },\n                {\n                    \"id\": 8,\n                    \"game_id\": 1,\n                    \"start_date\": \"2022-12-15\",\n                    \"start_time\": \"12:30:00\",\n                    \"winner_id\": null,\n                    \"is_finished\": false,\n                    \"created_at\": \"2022-12-12T05:26:29.000000Z\",\n                    \"updated_at\": \"2022-12-12T05:26:29.000000Z\"\n                },\n                {\n                    \"id\": 7,\n                    \"game_id\": 1,\n                    \"start_date\": \"2022-12-15\",\n                    \"start_time\": \"15:30:00\",\n                    \"winner_id\": null,\n                    \"is_finished\": false,\n                    \"created_at\": \"2022-12-12T05:26:25.000000Z\",\n                    \"updated_at\": \"2022-12-12T05:26:25.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"cumque\",\n            \"gamer_count\": 73,\n            \"reward_points\": 51,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches\": [\n                {\n                    \"id\": 2,\n                    \"game_id\": 2,\n                    \"start_date\": \"2022-12-14\",\n                    \"start_time\": \"12:30:00\",\n                    \"winner_id\": null,\n                    \"is_finished\": false,\n                    \"created_at\": \"2022-12-12T04:32:12.000000Z\",\n                    \"updated_at\": \"2022-12-12T04:32:12.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"odio\",\n            \"gamer_count\": 19,\n            \"reward_points\": 47,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches\": [\n                {\n                    \"id\": 3,\n                    \"game_id\": 3,\n                    \"start_date\": \"2022-12-14\",\n                    \"start_time\": \"12:30:00\",\n                    \"winner_id\": null,\n                    \"is_finished\": false,\n                    \"created_at\": \"2022-12-12T04:46:37.000000Z\",\n                    \"updated_at\": \"2022-12-12T04:46:37.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"name\": \"et\",\n            \"gamer_count\": 3,\n            \"reward_points\": 35,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches\": []\n        },\n        {\n            \"id\": 5,\n            \"name\": \"atque\",\n            \"gamer_count\": 95,\n            \"reward_points\": 21,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"matches\": []\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "LotteryGameMatches",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"game_id\":\"4\",\n    \"start_date\":\"2022-12-15\",\n    \"start_time\":\"12:30\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/lottery_game_matches",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lottery_game_matches"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"game_id\":\"4\",\n    \"start_date\":\"2022-12-15\",\n    \"start_time\":\"12:30\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/lottery_game_matches",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lottery_game_matches"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 08:10:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 08:10:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"successfully created\",\n    \"data\": {\n        \"game_id\": \"4\",\n        \"start_date\": \"2022-12-15\",\n        \"start_time\": \"12:30\",\n        \"updated_at\": \"2022-12-12T08:10:31.000000Z\",\n        \"created_at\": \"2022-12-12T08:10:31.000000Z\",\n        \"id\": 9\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "finish",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/lottery_game_matches/11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lottery_game_matches",
+								"11"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "finish",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/lottery_game_matches/11",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lottery_game_matches",
+										"11"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:00:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:00:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"successfully finished\",\n    \"data\": {\n        \"id\": 11,\n        \"game_id\": 5,\n        \"start_date\": \"2022-12-14\",\n        \"start_time\": \"12:30:00\",\n        \"winner_id\": 12,\n        \"is_finished\": true,\n        \"created_at\": \"2022-12-11T09:03:25.000000Z\",\n        \"updated_at\": \"2022-12-12T09:00:42.000000Z\",\n        \"match_users\": [\n            {\n                \"id\": 13,\n                \"user_id\": 1,\n                \"lottery_game_match_id\": 11,\n                \"created_at\": \"2022-12-12T08:10:51.000000Z\",\n                \"updated_at\": \"2022-12-12T08:10:51.000000Z\"\n            },\n            {\n                \"id\": 14,\n                \"user_id\": 2,\n                \"lottery_game_match_id\": 11,\n                \"created_at\": \"2022-12-12T08:10:51.000000Z\",\n                \"updated_at\": \"2022-12-12T08:10:51.000000Z\"\n            },\n            {\n                \"id\": 15,\n                \"user_id\": 3,\n                \"lottery_game_match_id\": 11,\n                \"created_at\": \"2022-12-12T08:10:51.000000Z\",\n                \"updated_at\": \"2022-12-12T08:10:51.000000Z\"\n            },\n            {\n                \"id\": 16,\n                \"user_id\": 11,\n                \"lottery_game_match_id\": 11,\n                \"created_at\": \"2022-12-12T08:10:51.000000Z\",\n                \"updated_at\": \"2022-12-12T08:10:51.000000Z\"\n            },\n            {\n                \"id\": 17,\n                \"user_id\": 12,\n                \"lottery_game_match_id\": 11,\n                \"created_at\": \"2022-12-12T08:10:51.000000Z\",\n                \"updated_at\": \"2022-12-12T08:10:51.000000Z\",\n                \"user\": {\n                    \"id\": 12,\n                    \"first_name\": \"fnameU\",\n                    \"last_name\": \"lnameU\",\n                    \"email\": \"fnameU@mail.com\",\n                    \"is_admin\": true,\n                    \"points\": 21,\n                    \"created_at\": \"2022-12-12T03:22:32.000000Z\",\n                    \"updated_at\": \"2022-12-12T09:00:42.000000Z\"\n                }\n            },\n            {\n                \"id\": 18,\n                \"user_id\": 13,\n                \"lottery_game_match_id\": 11,\n                \"created_at\": \"2022-12-12T08:10:51.000000Z\",\n                \"updated_at\": \"2022-12-12T08:10:51.000000Z\"\n            }\n        ],\n        \"game\": {\n            \"id\": 5,\n            \"name\": \"atque\",\n            \"gamer_count\": 95,\n            \"reward_points\": 21,\n            \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:14.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getByLotteryID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/lottery_game_matches?lottery_game_id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lottery_game_matches"
+							],
+							"query": [
+								{
+									"key": "lottery_game_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getByLotteryID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/lottery_game_matches?lottery_game_id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lottery_game_matches"
+									],
+									"query": [
+										{
+											"key": "lottery_game_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:05:53 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:05:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"requested list\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"game_id\": 1,\n            \"start_date\": \"2022-12-14\",\n            \"start_time\": \"12:30:00\",\n            \"winner_id\": 11,\n            \"is_finished\": false,\n            \"created_at\": \"2022-12-11T09:03:25.000000Z\",\n            \"updated_at\": \"2022-12-11T09:03:25.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"game_id\": 1,\n            \"start_date\": \"2022-12-13\",\n            \"start_time\": \"12:30:00\",\n            \"winner_id\": null,\n            \"is_finished\": false,\n            \"created_at\": \"2022-12-12T05:26:04.000000Z\",\n            \"updated_at\": \"2022-12-12T05:26:04.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"game_id\": 1,\n            \"start_date\": \"2022-12-13\",\n            \"start_time\": \"11:30:00\",\n            \"winner_id\": null,\n            \"is_finished\": false,\n            \"created_at\": \"2022-12-12T05:26:09.000000Z\",\n            \"updated_at\": \"2022-12-12T05:26:09.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"game_id\": 1,\n            \"start_date\": \"2022-12-15\",\n            \"start_time\": \"11:30:00\",\n            \"winner_id\": null,\n            \"is_finished\": false,\n            \"created_at\": \"2022-12-12T05:26:20.000000Z\",\n            \"updated_at\": \"2022-12-12T05:26:20.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"game_id\": 1,\n            \"start_date\": \"2022-12-15\",\n            \"start_time\": \"15:30:00\",\n            \"winner_id\": null,\n            \"is_finished\": false,\n            \"created_at\": \"2022-12-12T05:26:25.000000Z\",\n            \"updated_at\": \"2022-12-12T05:26:25.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"game_id\": 1,\n            \"start_date\": \"2022-12-15\",\n            \"start_time\": \"12:30:00\",\n            \"winner_id\": null,\n            \"is_finished\": false,\n            \"created_at\": \"2022-12-12T05:26:29.000000Z\",\n            \"updated_at\": \"2022-12-12T05:26:29.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "LotteryGameMatchUser",
+			"item": [
+				{
+					"name": "signUpForMatch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"match_id\":\"6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/lottery_game_match_users/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"lottery_game_match_users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signUpForMatch",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"match_id\":\"9\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/lottery_game_match_users/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lottery_game_match_users",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 08:12:16 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 08:12:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"The match is already filled with users\"\n}"
+						},
+						{
+							"name": "signUpForMatch",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"match_id\":\"6\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/lottery_game_match_users/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"lottery_game_match_users",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:08:29 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Dec 2022 09:08:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"successfully signed up\",\n    \"data\": {\n        \"user_id\": 12,\n        \"lottery_game_match_id\": \"6\",\n        \"updated_at\": \"2022-12-12T09:08:29.000000Z\",\n        \"created_at\": \"2022-12-12T09:08:29.000000Z\",\n        \"id\": 19,\n        \"match\": {\n            \"id\": 6,\n            \"game_id\": 1,\n            \"start_date\": \"2022-12-15\",\n            \"start_time\": \"11:30:00\",\n            \"winner_id\": null,\n            \"is_finished\": false,\n            \"created_at\": \"2022-12-12T05:26:20.000000Z\",\n            \"updated_at\": \"2022-12-12T05:26:20.000000Z\",\n            \"match_users\": [],\n            \"game\": {\n                \"id\": 1,\n                \"name\": \"voluptatem\",\n                \"gamer_count\": 37,\n                \"reward_points\": 69,\n                \"created_at\": \"2022-12-11T09:03:14.000000Z\",\n                \"updated_at\": \"2022-12-11T09:03:14.000000Z\"\n            }\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb3R0ZXJpZXNfYXBpIiwiaWQiOjEyLCJpYXQiOjE2NzA4MzQ4NDUsImV4cCI6MTY3MDgzODQ0NX0.x9whDLQIj-BuB1L0Pc-0XuKgnDtd7opWEkSBmPm6tJQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
