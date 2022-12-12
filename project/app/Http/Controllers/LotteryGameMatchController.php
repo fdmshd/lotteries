@@ -25,7 +25,10 @@ class LotteryGameMatchController extends Controller
 
     public function finish($id)
     {
-        $lotteryMatch = LotteryGameMatch::find($id); //Сделать обработку если не найдено
+        $lotteryMatch = LotteryGameMatch::find($id);
+        if (!$lotteryMatch) {
+            return response()->json(['error' => 'Match does not exist.'], 400);
+        }
         $lotteryMatch->is_finished = true;
         return response()->json(['message' => 'successfully finished', 'data' => $lotteryMatch], 200);
     }
@@ -33,7 +36,7 @@ class LotteryGameMatchController extends Controller
     public function getByLotteryID(Request $request)
     {
         $gameID = $request->query('lottery_game_id');
-        $lotteryMatches = LotteryGameMatch::where('game_id', $gameID)->get(); //Сделать обработку если не найдено
+        $lotteryMatches = LotteryGameMatch::where('game_id', $gameID)->get();
         return response()->json(['message' => 'requested list', 'data' => $lotteryMatches], 200);
     }
 }
