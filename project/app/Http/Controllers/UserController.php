@@ -14,10 +14,10 @@ class UserController extends Controller
     protected function jwt(User $user)
     {
         $payload = [
-            'iss' => "lotteries_api", // Issuer of the token
-            'id' => $user->id, // Subject of the token
-            'iat' => time(), // Time when JWT was issued. 
-            'exp' => time() + 60 * 60 // Expiration time
+            'iss' => "lotteries_api",
+            'id' => $user->id,
+            'iat' => time(),
+            'exp' => time() + 60 * 60
         ];
 
         return JWT::encode($payload, env('JWT_SECRET'), 'HS256');
@@ -67,6 +67,12 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
+        if ($request->auth->id != $request->id) {
+            return response()->json([
+                'error' => 'Not enough rights'
+            ], 403);
+        }
+
         $this->validate($request, [
             'first_name' => 'string|max:64',
             'last_name' => 'string|max:64',
@@ -83,9 +89,14 @@ class UserController extends Controller
         return response()->json(['message' => 'successfully updated', 'data' => $user], 200);
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
-        $user = User::find($id);
+        if ($request->auth->id != $request->id) {
+            return response()->json([
+                'error' => 'Not enough rights'
+            ], 403);
+        }
+        $user = User::find($request->id);
         $user->delete();
         return response()->json(['message' => 'successfully deleted', 'data' => $user], 204);
     }
