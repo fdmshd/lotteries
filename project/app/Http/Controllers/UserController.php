@@ -3,12 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Firebase\JWT\JWT;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use stdClass;
+
 
 class UserController extends Controller
 {
+
+    protected function jwt(User $user)
+    {
+        $payload = [
+            'iss' => "lotteries_api", // Issuer of the token
+            'id' => $user->id, // Subject of the token
+            'iat' => time(), // Time when JWT was issued. 
+            'exp' => time() + 60 * 60 // Expiration time
+        ];
+
+        return JWT::encode($payload, env('JWT_SECRET'), 'HS256');
+    }
 
     public function register(Request $request)
     {
@@ -36,14 +49,20 @@ class UserController extends Controller
             'password' => 'string|required|max:64'
         ]);
 
-        $user = User::where('email', $request->email)->firstOrFail();
+        $user = User::where('email', $request->email)->first();
+        if (!$user) {
+            return response()->json(['error' => 'Email does not exist.'], 400);
+        }
+
         if (!Hash::check($request->password, $user->password)) {
             return response()->json(['error' => 'Wrong password'], 400);
         }
 
-        //создать и вернуть токенs
-
-        return response()->json(['message' => 'successfully logged in', 'data' => $user], 200);
+        return response()->json([
+            'message' => 'successfully logged in',
+            'data' => $user,
+            'token' => $this->jwt($user)
+        ], 200);
     }
 
     public function update(Request $request)
@@ -71,12 +90,10 @@ class UserController extends Controller
         return response()->json(['message' => 'successfully deleted', 'data' => $user], 204);
     }
 
-
-    //
     public function list()
     {
         $users = User::all();
-        foreach($users as $user){
+        foreach ($users as $user) {
             $user->matchesWon;
         }
         return response()->json(['message' => 'requested list', 'data' => $users], 200);
@@ -86,6 +103,6 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->matchesWon;
-        return response()->json(['message' => 'requested list', 'data' => $user], 200);
+        return response()->json(['message' => 'requested user', 'data' => $user], 200);
     }
 }
