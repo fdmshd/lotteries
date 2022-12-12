@@ -23,7 +23,7 @@ class LotteryGameFactory extends Factory
     {
         return [
             'name' => $this->faker->word(),
-            'gamer_count'=>$this->faker->numberBetween(0,100),
+            'gamer_count'=>$this->faker->numberBetween(0,15),
             'reward_points'=>$this->faker->numberBetween(0,100)
         ];
     }
