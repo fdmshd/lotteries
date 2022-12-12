@@ -18,7 +18,7 @@ class LotteryGameMatchUser extends Model
 
     function match()
     {
-        return $this->belongsTo(LotteryGameMatch::class);
+        return $this->belongsTo(LotteryGameMatch::class, foreignKey:'lottery_game_match_id');
     }
 
     function user()

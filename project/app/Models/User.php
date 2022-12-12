@@ -45,15 +45,4 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         return $this->hasMany(LotteryGameMatch::class, foreignKey: 'winner_id');
     }
 
-    public function matches()
-    {
-        return $this->hasManyThrough(
-            LotteryGameMatch::class,
-            LotteryGameMatchUser::class,
-            'user_id',
-            'game_id',
-            'id',
-            'id'
-        );
-    }
 }

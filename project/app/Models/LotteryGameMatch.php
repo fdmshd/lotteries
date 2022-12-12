@@ -19,13 +19,18 @@ class LotteryGameMatch extends Model
         'is_finished'
     ];
 
+    public function game()
+    {
+        return $this->belongsTo(LotteryGame::class);
+    }
+
     public function winner()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function users()
+    public function matchUsers()
     {
-        return $this->hasManyThrough(User::class, LotteryGameMatchUser::class,firstKey:'game_id');
+        return $this->hasMany(LotteryGameMatchUser::class, 'lottery_game_match_id');
     }
 }
